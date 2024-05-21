@@ -1,2 +1,3 @@
 # music_player
- UI de um player de músicas
+
+EDITAR APÓS A FINALIZAÇÃO DO PROJETO
