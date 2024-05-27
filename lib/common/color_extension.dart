@@ -15,7 +15,7 @@ class TColor {
   static Color get primaryText80 => const Color(0xffFFFFFF).withOpacity(0.8);
   static Color get primaryText60 => const Color(0xffFFFFFF).withOpacity(0.6);
   static Color get primaryText35 => const Color(0xffFFFFFF).withOpacity(0.35);
-  static Color get primaryText28 => const Color(0xffFFFFFF).withOpacity(0.28);
+  static Color get primaryText20 => const Color(0xffFFFFFF).withOpacity(0.20);
   static Color get secondaryText => const Color(0xff585A66);
   
 
