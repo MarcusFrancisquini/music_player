@@ -43,10 +43,9 @@ class _MainTabViewState extends State<MainTabView> with SingleTickerProviderStat
     return Scaffold(
       body: TabBarView(
         controller: controller,
+        //? tabs
         children: [
-          const HomeView(
-            
-          ),
+          const HomeView(),
           Container(
             child: const Center(child: Text("Songs"))
           ),
@@ -55,6 +54,7 @@ class _MainTabViewState extends State<MainTabView> with SingleTickerProviderStat
           ),
         ],
       ),
+      //? customization
       bottomNavigationBar: Container(
         decoration: BoxDecoration(
           color: TColor.bg,

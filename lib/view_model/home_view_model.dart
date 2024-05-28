@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:music_player/view/main_tabview/main_tabview.dart';
+//import 'package:music_player/view/main_tabview/main_tabview.dart';
 
 class HomeViewModel extends GetxController {
   
-  // hot recommended
+  //* hot recommended
   final hotRecommendedList = [
     {
       "image": "assets/images/img_1.png",
@@ -18,7 +18,7 @@ class HomeViewModel extends GetxController {
     }
   ].obs;
 
-  // playlists
+  //* playlists
   final playLists = [
     {
       "image": "assets/images/img_3.png",
@@ -37,25 +37,25 @@ class HomeViewModel extends GetxController {
     }
   ];
 
-  // recently played
+  //* recently played
   final recentlyPlayed = [
     {
-      "rate": 4,
+      "rate": 4.0,
       "name": "Billie Jean",
       "artist": "Michael Jackson"
     },
     {
-      "rate": 2,
+      "rate": 3.5,
       "name": "Earth Song",
       "artist": "Michael Jackson"
     },
     {
-      "rate": 4,
+      "rate": 5.0,
       "name": "Mirror",
       "artist": "Justin Timberlake"
     },
     {
-      "rate": 3,
+      "rate": 3.0,
       "name": "Remmenber the Time",
       "artist": "Michael Jackson"
     }
