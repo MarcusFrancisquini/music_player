@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:music_player/common/color_extension.dart';
 import 'package:music_player/common_widget/hot_recommended_card.dart';
 import 'package:music_player/common_widget/title_section.dart';
+import 'package:music_player/view_model/splash_view_model.dart';
 
 import '../../common_widget/playlist_card.dart';
 import '../../common_widget/song_row.dart';
@@ -27,7 +28,9 @@ class _HomeViewState extends State<HomeView> {
         backgroundColor: TColor.bg,
         elevation: 0,
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Get.find<SplashViewModel>().openDrawer();
+          },
           icon: Image.asset(
             "assets/images/menu.png",
             width: 25,
