@@ -6,6 +6,10 @@ import 'package:music_player/common/color_extension.dart';
 import 'package:music_player/view/home/home_view.dart';
 import 'package:music_player/view_model/splash_view_model.dart';
 
+import '../settings/settings_view.dart';
+import '../songs/song_view.dart';
+import '../../common_widget/icon_text_row.dart';
+
 class MainTabView extends StatefulWidget {
   const MainTabView({super.key});
 
@@ -54,7 +58,7 @@ class _MainTabViewState extends State<MainTabView> with SingleTickerProviderStat
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
-            //? topo da tela
+            //? drawer
             SizedBox(
               height: 235,
               child: DrawerHeader(
@@ -121,194 +125,47 @@ class _MainTabViewState extends State<MainTabView> with SingleTickerProviderStat
               ),
             ),
             //* item 1
-            ListTile(
-              onTap: (){
-                splahVM.closeDrawer();
-              },
-              leading: Image.asset(
-                "assets/images/m_theme.png",
-                width: 25,
-                height: 25,
-                fit: BoxFit.contain,
-              ),
-              title: Text(
-                "Themes",
-                style: TextStyle(
-                  color: TColor.primaryText.withOpacity(0.9),
-                  fontSize: 14,
-                  fontWeight: FontWeight.w500
-                ),
-              ),
-            ),
-            Divider(
-              color: TColor.darkGray,
-              indent: 70,
-              endIndent: 12,
-              height: 5,
-              thickness: 1.5,
+            IconTextRow(
+              title: 'Themes',
+              icon: 'assets/images/m_theme.png',
+              onTap: (){},
             ),
             //* item 2
-            ListTile(
-              onTap: (){
-                splahVM.closeDrawer();
-              },
-              leading: Image.asset(
-                "assets/images/m_ring_cut.png",
-                width: 25,
-                height: 25,
-                fit: BoxFit.contain,
-              ),
-              title: Text(
-                "Ringtone Cutter",
-                style: TextStyle(
-                  color: TColor.primaryText.withOpacity(0.9),
-                  fontSize: 14,
-                  fontWeight: FontWeight.w500
-                ),
-              ),
-            ),
-            Divider(
-              color: TColor.darkGray,
-              indent: 70,
-              endIndent: 12,
-              height: 5,
-              thickness: 1.5,
+            IconTextRow(
+              title: 'Ringtone Cutter',
+              icon: 'assets/images/m_ring_cut.png',
+              onTap: (){},
             ),
             //* item 3
-            ListTile(
-              onTap: (){
-                splahVM.closeDrawer();
-              },
-              leading: Image.asset(
-                "assets/images/m_sleep_timer.png",
-                width: 25,
-                height: 25,
-                fit: BoxFit.contain,
-              ),
-              title: Text(
-                "Sleep Timer",
-                style: TextStyle(
-                  color: TColor.primaryText.withOpacity(0.9),
-                  fontSize: 14,
-                  fontWeight: FontWeight.w500
-                ),
-              ),
-            ),
-            Divider(
-              color: TColor.darkGray,
-              indent: 70,
-              endIndent: 12,
-              height: 5,
-              thickness: 1,
+            IconTextRow(
+              title: 'Sleep Timer',
+              icon: 'assets/images/m_sleep_timer.png',
+              onTap: (){},
             ),
             //* item 4
-            ListTile(
-              onTap: (){
-                splahVM.closeDrawer();
-              },
-              leading: Image.asset(
-                "assets/images/m_eq.png",
-                width: 25,
-                height: 25,
-                fit: BoxFit.contain,
-              ),
-              title: Text(
-                "Equliser",
-                style: TextStyle(
-                  color: TColor.primaryText.withOpacity(0.9),
-                  fontSize: 14,
-                  fontWeight: FontWeight.w500
-                ),
-              ),
-            ),
-            Divider(
-              color: TColor.darkGray,
-              indent: 70,
-              endIndent: 12,
-              height: 5,
-              thickness: 1,
+            IconTextRow(
+              title: 'Equliser',
+              icon: 'assets/images/m_eq.png',
+              onTap: (){},
             ),
             //* item 5
-            ListTile(
-              onTap: (){
-                splahVM.closeDrawer();
-              },
-              leading: Image.asset(
-                "assets/images/m_driver_mode.png",
-                width: 25,
-                height: 25,
-                fit: BoxFit.contain,
-              ),
-              title: Text(
-                "Drive Mode",
-                style: TextStyle(
-                  color: TColor.primaryText.withOpacity(0.9),
-                  fontSize: 14,
-                  fontWeight: FontWeight.w500
-                ),
-              ),
-            ),
-            Divider(
-              color: TColor.darkGray,
-              indent: 70,
-              endIndent: 12,
-              height: 5,
-              thickness: 1,
+            IconTextRow(
+              title: 'Drive Mode',
+              icon: 'assets/images/m_driver_mode.png',
+              onTap: (){},
             ),
             //* item 6
-            ListTile(
-              onTap: (){
-                splahVM.closeDrawer();
-              },
-              leading: Image.asset(
-                "assets/images/m_hidden_folder.png",
-                width: 25,
-                height: 25,
-                fit: BoxFit.contain,
-              ),
-              title: Text(
-                "Hidden Folders",
-                style: TextStyle(
-                  color: TColor.primaryText.withOpacity(0.9),
-                  fontSize: 14,
-                  fontWeight: FontWeight.w500
-                ),
-              ),
-            ),
-            Divider(
-              color: TColor.darkGray,
-              indent: 70,
-              endIndent: 12,
-              height: 5,
-              thickness: 1,
+            IconTextRow(
+              title: 'Hidden Folders',
+              icon: 'assets/images/m_hidden_folder.png',
+              onTap: (){},
             ),
             //* item 7
-            ListTile(
-              onTap: (){
-                splahVM.closeDrawer();
-              },
-              leading: Image.asset(
-                "assets/images/m_scan_media.png",
-                width: 25,
-                height: 25,
-                fit: BoxFit.contain,
-              ),
-              title: Text(
-                "Scan Media",
-                style: TextStyle(
-                  color: TColor.primaryText.withOpacity(0.9),
-                  fontSize: 14,
-                  fontWeight: FontWeight.w500
-                ),
-              ),
-            ),
-            Divider(
-              color: TColor.darkGray,
-              indent: 70,
-              endIndent: 12,
-              height: 5,
-              thickness: 1,
-            ),
+            IconTextRow(
+              title: 'Scan Media',
+              icon: 'assets/images/m_scan_media.png',
+              onTap: (){},
+            )
           ],
         ),
       ),
@@ -317,12 +174,8 @@ class _MainTabViewState extends State<MainTabView> with SingleTickerProviderStat
         //? tabs
         children: [
           const HomeView(),
-          Container(
-            child: const Center(child: Text("Songs"))
-          ),
-          Container(
-            child: const Center(child: Text("Settings"))
-          ),
+          const SongsView(),
+          const SettingsView(),
         ],
       ),
       //? customization
