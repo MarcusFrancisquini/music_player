@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:music_player/view/songs/all_songs_view.dart';
+import 'package:music_player/view/songs/playlist_view.dart';
 
 import '../../common/color_extension.dart';
 import '../../view_model/splash_view_model.dart';
@@ -92,21 +94,11 @@ class _SongsViewState extends State<SongsView> with SingleTickerProviderStateMix
               indicatorColor: TColor.focus,
               isScrollable: true,
               tabs: [
-                Tab(
-                  text: 'All Songs',                 
-                ),
-                Tab(
-                  text: 'Playlists',
-                ),
-                Tab(
-                  text: 'Albums',
-                ),
-                Tab(
-                  text: 'Artists',
-                ),
-                Tab(
-                  text: 'Genre',
-                ),
+                Tab(text: 'All Songs'),
+                Tab(text: 'Playlists'),
+                Tab(text: 'Albums'),
+                Tab(text: 'Artists'),
+                Tab(text: 'Genre'),
               ],
             ),
           ),
@@ -114,21 +106,11 @@ class _SongsViewState extends State<SongsView> with SingleTickerProviderStateMix
             child: TabBarView(
               controller: controller,
               children: [
-                Center(
-                  child: Text("All Songs"),
-                ),
-                Center(
-                  child: Text("Playlists"),
-                ),
-                Center(
-                  child: Text("Albums"),
-                ),
-                Center(
-                  child: Text("Artists"),
-                ),
-                Center(
-                  child: Text("Genre"),
-                ),
+                AllSongsView(),
+                PlaylistView(),
+                Center(child: Text("Albums")),
+                Center(child: Text("Artists")),
+                Center(child: Text("Genre")),
               ],
             ),
           )
