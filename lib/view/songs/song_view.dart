@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:music_player/view/songs/albums_view.dart';
 import 'package:music_player/view/songs/all_songs_view.dart';
 import 'package:music_player/view/songs/playlist_view.dart';
 
@@ -108,7 +109,7 @@ class _SongsViewState extends State<SongsView> with SingleTickerProviderStateMix
               children: [
                 AllSongsView(),
                 PlaylistView(),
-                Center(child: Text("Albums")),
+                AlbumsView(),
                 Center(child: Text("Artists")),
                 Center(child: Text("Genre")),
               ],
