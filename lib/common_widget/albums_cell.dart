@@ -7,7 +7,7 @@ import '../common/color_extension.dart';
 class AlbumsCell extends StatelessWidget {
   final Map aObj;
   final VoidCallback onPressed;
-  final VoidCallback onPressedMenu;
+  final Function(int) onPressedMenu;
 
   const AlbumsCell({
     super.key,
@@ -53,14 +53,132 @@ class AlbumsCell extends StatelessWidget {
             SizedBox(
               width: 4,
             ),
-            InkWell(
-              onTap: (){
-
-              },
-              child: Image.asset(
-                "assets/images/more_btn.png",
-                width: 12,
-                height: 12,
+            //? menu 
+            SizedBox(
+              width: 12,
+              height: 12,
+              child: PopupMenuButton<int>(
+                offset: Offset(-5, 15),
+                color: Color(0xff383B49),
+                icon: Image.asset(
+                  "assets/images/more_btn.png",
+                  width: 11,
+                  height: 11
+                ),
+                onSelected: onPressedMenu,
+                padding: EdgeInsets.zero,
+                itemBuilder: (context){
+                  return [
+                    //* item 1
+                    PopupMenuItem(
+                      height: 35,
+                      value: 1,
+                      child: Text(
+                        "Play",
+                        style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.bold
+                        ),
+                      ),
+                    ),
+                    //* item 2
+                    PopupMenuItem(
+                      height: 35,
+                      value: 2,
+                      child: Text(
+                        "Play next",
+                        style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.bold
+                        ),
+                      ),
+                    ),
+                    //* item 3
+                    PopupMenuItem(
+                      height: 35,
+                      value: 3,
+                      child: Text(
+                        "Add to playing queue",
+                        style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.bold
+                        ),
+                      ),
+                    ),
+                    //* item 4
+                    PopupMenuItem(
+                      height: 35,
+                      value: 4,
+                      child: Text(
+                        "Add to playlist...",
+                        style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.bold
+                        ),
+                      ),
+                    ),
+                    //* item 5
+                    PopupMenuItem(
+                      height: 35,
+                      value: 5,
+                      child: Text(
+                        "Rename",
+                        style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.bold
+                        ),
+                      ),
+                    ),
+                    //* item 6
+                    PopupMenuItem(
+                      height: 35,
+                      value: 6,
+                      child: Text(
+                        "Tag editor",
+                        style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.bold
+                        ),
+                      ),
+                    ),
+                    //* item 7
+                    PopupMenuItem(
+                      height: 35,
+                      value: 7,
+                      child: Text(
+                        "Go to artist",
+                        style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.bold
+                        ),
+                      ),
+                    ),
+                    //* item 8
+                    PopupMenuItem(
+                      height: 35,
+                      value: 8,
+                      child: Text(
+                        "Delete from device",
+                        style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.bold
+                        ),
+                      ),
+                    ),
+                    //* item 9
+                    PopupMenuItem(
+                      height: 35,
+                      value: 9,
+                      child: Text(
+                        "Share",
+                        style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.bold
+                        ),
+                      ),
+                    ),
+                  ];
+                },
               ),
             )
           ],

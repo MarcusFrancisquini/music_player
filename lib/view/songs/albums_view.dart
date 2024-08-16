@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:music_player/common_widget/albums_cell.dart';
@@ -35,7 +36,11 @@ class _AlbumsViewState extends State<AlbumsView> {
           return AlbumsCell(
             aObj: aObj,
             onPressed: (){},
-            onPressedMenu: (){},
+            onPressedMenu: (selectIndex){
+              if (kDebugMode) {
+                print(index);
+              }
+            },
           );
         },
       )),
