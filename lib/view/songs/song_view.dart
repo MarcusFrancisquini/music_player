@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:music_player/view/songs/albums_view.dart';
 import 'package:music_player/view/songs/all_songs_view.dart';
+import 'package:music_player/view/songs/artists_view.dart';
 import 'package:music_player/view/songs/playlist_view.dart';
 
 import '../../common/color_extension.dart';
@@ -99,7 +100,7 @@ class _SongsViewState extends State<SongsView> with SingleTickerProviderStateMix
                 Tab(text: 'Playlists'),
                 Tab(text: 'Albums'),
                 Tab(text: 'Artists'),
-                Tab(text: 'Genre'),
+                Tab(text: 'Genres'),
               ],
             ),
           ),
@@ -110,8 +111,8 @@ class _SongsViewState extends State<SongsView> with SingleTickerProviderStateMix
                 AllSongsView(),
                 PlaylistView(),
                 AlbumsView(),
-                Center(child: Text("Artists")),
-                Center(child: Text("Genre")),
+                ArtistsView(),
+                Center(child: Text("Genres")),
               ],
             ),
           )
