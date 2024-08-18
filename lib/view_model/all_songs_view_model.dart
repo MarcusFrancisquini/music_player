@@ -39,12 +39,12 @@ class AllSongsViewModel extends GetxController{
       "artists": "Michael Jackson"
     },
     {
-      "image": "assets/images/s9.png",
+      "image": "assets/images/s8.png",
       "name": "Somebody that I used to know",
       "artists": "Gotye"
     },
     {
-      "image": "assets/images/s10.png",
+      "image": "assets/images/s9.png",
       "name": "Wild Thoughts",
       "artists": "Rihanna"
     }
